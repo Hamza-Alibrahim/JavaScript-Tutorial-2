@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo-container {
+    width: 600px;
+    margin: 30px auto 0;
+    background-color: #f6f6f6;
+}
+
+.todo-container .add-task {
+    padding: 15px;
+    background-color: #009688;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+}
+
+.add-task input {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, .3);
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    outline: none;
+    border-radius: 40px;
+}
+
+.plus {
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    background-color: white;
+    right: 15px;
+    border-radius: 50%;
+    line-height: 43px;
+    text-align: center;
+    color: #009688;
+    cursor: pointer;
+    font-size: 38px;
+    transition: transform .3s;
+}
+
+.plus:hover {
+    transform: rotate(90deg);
+}
+
+.todo-container .tasks-content {
+    padding: 15px;
+    border-radius: 0 0 4px 4px;
+}
+
+.tasks-content .no-tasks {
+    color: #777;
+    font-size: 15px;
+}
+
+.tasks-content>span {
+    display: block;
+    background-color: white;
+    padding: 10px;
+}
+
+.tasks-content>span:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.tasks-content .task-box .delete {
+    float: right;
+    background-color: #e91e63;
+    padding: 4px 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tasks-content .task-box.finished {
+    text-decoration: line-through;
+}
+
+.task-stats {
+    overflow: hidden;
+    margin: 10px auto;
+    width: 600px;
+    font-size: 12px;
+}
+
+.tasks-count {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.tasks-completed {
+    width: 50%;
+    float: right;
+    padding: 10px;
+    text-align: right;
+}
+
+.tasks-count span,
+.tasks-completed span {
+    color: white;
+    padding: 1px 5px;
+    font-size: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.tasks-count span {
+    background-color: #e91e63;
+}
+
+.tasks-completed span {
+    background-color: #03a9f4;
+}
