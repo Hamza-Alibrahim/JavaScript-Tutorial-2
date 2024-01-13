@@ -64,6 +64,7 @@ delall.onclick = function dalltasks() {
     let x = tasks.children.length;
     for (let i = 0; i < x; i++) {
         tasks.children[0].remove();
+        tasksnumber.textContent = +tasksnumber.textContent - 1;
     }
     tasks.appendChild(notasks);
 }
